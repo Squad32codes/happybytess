@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mainScreens.css">
+    <style>
+
+    </style>
+</head>
+<body style="background-image:url(img/background.png)">
+<div class="allContent">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="home.html">Home</a>
+        <a href="condition.html">How was your day?</a>
+        <a href="#">Get Advice</a>
+        <a href="#">Important Contacts</a>
+        <div id="settings">
+            <a href="settings.html">Settings</a>
+        </div>
+    </div>
+
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <script>
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+    }
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    }
+    function darkNav() {
+    document.getElementById("mySidenav").style.background = darkgrey;
+    }
+    </script>
+
+    <!--End Drawer Navigator-->
+
+    <h1> Take the survey here and we will give you advice to help improve your day! </h1>
+
+</div>
+</body>
+</html>
