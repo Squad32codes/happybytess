@@ -3,54 +3,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="mainScreens.css">
-
-   <style>
-.slidecontainer {
-  width: 100%;
-
-}
-
-.slider {
-  margin-top: 75px;
-  margin-left: 20px;
-
-  -webkit-appearance: none;
-  width: 100%;
-  height: 15px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4CAF50;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4CAF50;
-  cursor: pointer;
-}
-</style>
-
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-    <script src="lib/js/jquery.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/jquery.js"></script>
+    <script src="js/surveyComplex.js"></script>
     <script type="text/javascript">
     var s = document.createElement('script');
     s.innerHTML = window.android.getFileContents();
@@ -86,14 +42,16 @@
     document.getElementById("mySidenav").style.background = darkgrey;
     }
     </script>
+
     <!--End Drawer Navigator-->
-   <div class="d-flex justify-content-center my-4">
-  <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
-  <form class="range-field w-25">
-    <input class="border-0" type="range" min="0" max="100" />
-  </form>
-  <span class="font-weight-bold indigo-text ml-2 mt-1">100</span>
-</div>
+
+
+    <h1> Take the survey here and we will give you advice to help improve your day! </h1>
+    <a href="surveyComplex.html">Survey</a>
+
+    <label for="conditionSlider">Complex Condition Slider</label>
+    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider">
+    <div id="sliderValue">asdasdsdasd</div>
 
 </div>
 </body>
