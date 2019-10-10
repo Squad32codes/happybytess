@@ -12,10 +12,15 @@
     s.innerHTML = window.android.getFileContents();
     document.head.appendChild(s);
     </script>
-
+<style>
+ .allContent {
+margin-left = 50px;
+margin-right = 10px;
+}
+</style>
 </head>
 <body style="background-image:url(img/background.png)">
-<div class="allContent">
+
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="home.html">Home</a>
@@ -44,15 +49,32 @@
     </script>
 
     <!--End Drawer Navigator-->
-
-
-    <h1> Take the survey here and we will give you advice to help improve your day! </h1>
-    <a href="surveyComplex.html">Survey</a>
-
+    <div class="allContent">
     <label for="conditionSlider">Complex Condition Slider</label>
-    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider">
-    <div id="sliderValue">asdasdsdasd</div>
 
+    <label for="conditionSlider">Question #1</label>
+    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider">
+    <label for="conditionSlider">Question #2</label>
+    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider2">
+    <label for="conditionSlider">Question #3</label>
+    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider3">
+
+
+    <button id='okButton' onclick="myFunction()">Click me</button>
+
+    <div id='sliderValue'>
+
+        <script>
+    function myFunction (){
+
+            var total = slideA + slideB + slideC;  // 11 balances the negative, making score range from 2-30
+    console.log(total);
+        if (total == 3){
+         window.location.replace("https://www.youtube.com/");
+        console.log("slider1WORKING");
+    }}
+
+    </script>
 </div>
 </body>
 </html>
