@@ -1,9 +1,14 @@
 <!DOCtype HTML>
 <head>
-    <link rel="stylesheet" href="welcomeScreens.css">
+    <link rel="stylesheet" href="mainScreens.css">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-    <script src="lib/js/jquery.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/jquery.js"></script>
+    <script type="text/javascript">
+    var s = document.createElement('script');
+    s.innerHTML = window.android.getFileContents();
+    document.head.appendChild(s);
+    </script>
     <title>HappyBytes Login</title>
     <style>
 
