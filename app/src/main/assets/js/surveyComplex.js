@@ -1,10 +1,10 @@
    // A $( document ).ready() block.
-var slideA = 0;
-var slideB = 0;
-var slideC = 0;
 
     $( document ).ready(function() {
-
+        var slideA = 0;
+        var slideB = 0;
+        var slideC = 0;
+        var total;
      $('#conditionSlider').change(function(){
             $('#sliderValue').html($('#conditionSlider').val());
             slideA = $('#conditionSlider').val();
@@ -23,5 +23,17 @@ var slideC = 0;
             return(slideC);
      });
 
+
+        $('#okButton').click(function() {
+                 // Use parseInt(text, 10) to parse a string into an integer
+                 // https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/
+                 total = parseInt(slideA, 10)+parseInt(slideB, 10)+parseInt(slideC, 10);
+
+                 console.log("slideA " + slideA);
+                 console.log("slideB " + slideB);
+                 console.log("slideC " + slideC);
+                 console.log("Total " + total);
+
+        })
 
    });
