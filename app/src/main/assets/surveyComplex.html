@@ -6,17 +6,21 @@
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery.js"></script>
+    <script src="js/surveyComplex.js"></script>
     <script type="text/javascript">
     var s = document.createElement('script');
     s.innerHTML = window.android.getFileContents();
     document.head.appendChild(s);
     </script>
-    <style>
-
-    </style>
+<style>
+ .allContent {
+margin-left = 50px;
+margin-right = 10px;
+}
+</style>
 </head>
 <body>
-<div class="allContent">
+
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="home.html">Home</a>
@@ -45,12 +49,23 @@
     </script>
 
     <!--End Drawer Navigator-->
+    <div class="container-fluid">
+    <br>
+    <label for="conditionSlider">Answer the questions below from one to ten</label><br>
 
+    <label for="conditionSlider">How was your day?</label>
+    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider">
+    <label for="conditionSlider">Do you feel that you got everything you wanted done done?</label>
+    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider2">
+    <label for="conditionSlider">Do you think that anything or anyone was working against you today?</label>
+    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider3">
 
-    <h1> Take the survey here and we will give you advice to help improve your day! </h1>
-    <a href="surveyComplex.html">Survey</a>
-
-
+        <br>
+        <br>
+<div class="text-center">
+    <button id='okButton' onclick="myFunction()">Finished? Click me!</button>
+</div>
+    <div id='sliderValue'>
 
 </div>
 </body>
