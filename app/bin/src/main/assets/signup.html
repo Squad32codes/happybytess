@@ -2,9 +2,6 @@
 <head>
     <title>HappyBytes Login</title>
     <link rel="stylesheet" href="welcomeScreens.css">
-    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-    <script src="lib/js/jquery.js"></script>
-    <script src="lib/js/bootstrap.min.js"></script>
     <style>
 
 
@@ -51,20 +48,13 @@
         padding-right:40px;
         padding-left:40px;
     }
-    .back{
-    text-align:center;
-    margin-top:30px;
-    }
-#scale{
-    padding-right:20px;
-    padding-left:20px;
-}
+
 
 
     </style>
 </head>
 
-<body>
+<body style="background-image:url(img/background.png)">
 <div class="allContent">
     <div class="logo">
         <img src="img/logo.png">
@@ -78,18 +68,18 @@
             <br> <input type="text" name="password" placeholder="RePassword" class="textBox"><br>
 
             <div id="toHome">
-                <a href="home.html"><button type="button" class="btn btn-primary" id="signup">Signup</button></a>
+                <a href="home.html"><button type="button" class="signUp">Signup</button></a>
             </div>
         </form>
     </div>
 
     <div class="haveAccount">
         <p>Already have and account?</p>
-        <a href="login.html"><button type="button" class="btn btn-secondary" id="scale">login</button></a>
+        <a href="login.html"><button type="button" id="login">login</button></a>
     </div>
 
     <div class="back">
-        <a href="index.html"><button type="button" class="btn btn-secondary" id="scale">back</button></a>
+        <a href="index.html"><button type="button" id="backButton">back</button></a>
     </div>
 </div>
 </body>
