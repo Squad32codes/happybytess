@@ -13,7 +13,9 @@
     document.head.appendChild(s);
     </script>
     <style>
-
+.takeSurveyButton{
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -30,7 +32,7 @@
     </div>
 
 
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <span style="font-size:30px;cursor:pointer;margin-left:6px" onclick="openNav()">&#9776;</span>
 
     <script>
     function openNav() {
@@ -53,12 +55,13 @@
 
     <!-- Modal -->
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Take Survey</button>
-
+    <div class="takeSurveyButton">
+    <button class="btn btn-outline-primary" id="myBtn">Take Survey</button>
+    </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
-        <!-- Modal content -->
+        <!-- Complex Survey -->
         <div class="modal-content">
             <div class="modal-header">
                 <h2>How was your day Survey:</h2>
