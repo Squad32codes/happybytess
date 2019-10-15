@@ -1,4 +1,3 @@
-
    /*
 The Drawer Navigator
 */
@@ -158,7 +157,7 @@ End switch styles
 /* Modal Header */
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #42a5e3;
   color: white;
 }
 

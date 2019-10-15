@@ -1,4 +1,4 @@
-   // A $( document ).ready() block.
+ // A $( document ).ready() block.
 
     $( document ).ready(function() {
         var slideA = 0;
@@ -38,14 +38,15 @@
                  } else {
                     window.location.replace("badDay.html")
                  }
-/*
+
+
+              /*
               $('#sliderValue').html("total " + total);
+
               console.log("slideA " + slideA);
               console.log("slideB " + slideB);
               console.log("slideC " + slideC);
               console.log("Total " + total);*/
-
-
 
 
 
