@@ -30,23 +30,22 @@
                  total = parseInt(slideA, 10)+parseInt(slideB, 10)-parseInt(slideC, 10) + 11;
 
                  if        (total >= 24){
-                    window.location.replace("")
+                    window.location.replace("greatDay.html")
                  } else if (total >= 17){
-                    window.location.replace("")
+                    window.location.replace("goodDay.html")
                  } else if (total >= 11){
-                    window.location.replace("")
+                    window.location.replace("okDay.html")
                  } else {
-                    window.location.replace("")
+                    window.location.replace("badDay.html")
                  }
-
-
-
+/*
               $('#sliderValue').html("total " + total);
-              /*
               console.log("slideA " + slideA);
               console.log("slideB " + slideB);
               console.log("slideC " + slideC);
               console.log("Total " + total);*/
+
+
 
 
 
