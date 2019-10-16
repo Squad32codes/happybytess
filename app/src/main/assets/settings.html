@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery.js"></script>
+    <script src="js/mainPages.js"></script>
     <script type="text/javascript">
     var s = document.createElement('script');
     s.innerHTML = window.android.getFileContents();
@@ -41,7 +42,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="home.html">Home</a>
         <a href="condition.html">How was your day?</a>
-        <a href="getadvice.html">Get Advice</a>
+        <a href="getadvice.html">Get Help</a>
         <a href="contacts.html">Important Contacts</a>
         <div id="settings">
             <a href="settings.html">Settings</a>
@@ -50,45 +51,6 @@
 
 
 
-
-    <script>
-    function openNav() {
-    document.getElementById("mySidenav").style.width = "300px";
-    }
-
-    function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    }
-    function darkNav() {
-    document.getElementById("mySidenav").style.background = darkgrey;
-    }
-    function mornNotes() {
-  alert('Morning notifications are on');
-    }
-    function darkness(){
-    //put the things
-    }
-
-       //signout
-
-    function profile (){
-            document.getElementById("myDropdown").classList.toggle("show");
-    }
-    // Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.profilePic')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-    </script>
 
     <!--End Drawer Navigator-->
 
@@ -124,16 +86,7 @@ if (checkbox = true){
 
 }
 
-NOT WORKING EXPERIMENTAL
 
-<script>
-/*
-var themeSwitch = document.getElementById("myCheck").checked;
-if (themeSwitch === true){
-    document.getElementById("settings").style.allContent = black;
-}
-not implemented yeet
-*/
-</script>
+
 </body>
 </html>
