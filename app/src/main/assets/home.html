@@ -7,7 +7,9 @@
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery.js"></script>
     <script src="js/surveyComplex.js"></script>
+    <script src="js/mainPages.js"></script>
     <script type="text/javascript">
+
     var s = document.createElement('script');
     s.innerHTML = window.android.getFileContents();
     document.head.appendChild(s);
@@ -136,48 +138,10 @@ window.onclick = function(event) {
   }
 }
 
-//Drawer Navigator JS
-
-   function openNav() {
-        document.getElementById("mySidenav").style.width = "300px";
-        }
-
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        }
-    function darkNav() {
-        document.getElementById("mySidenav").style.background = darkgrey;
-        }
-    function myFunction() {
-        var txt;
-        var person = prompt("Please enter your username:", "Username");
-        if (person == null || person == "") {
-            txt = "enter user name";
-        } else {
-            txt = "Welcome " + person + "! To happybytes!";
-        }
-        document.getElementById("username").innerHTML = txt;
-        document.getElementById("after").style.visibility="hidden";
-        }
 
     //signout
 
-    function profile (){
-            document.getElementById("myDropdown").classList.toggle("show");
-    }
-    // Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.profilePic')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+
 </script>
 
 </body>
