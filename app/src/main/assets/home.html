@@ -25,9 +25,13 @@
         padding: 10px;
         color: white;
         }
+<<<<<<< HEAD
         textarea {
          resize: none;
 }
+=======
+
+>>>>>>> 49258120ac1a618897f6b9b170a93b1886d6f10d
     </style>
 </head>
 
@@ -45,36 +49,29 @@
         </div>
 
 
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<!--Top Bar-->
+<div class="topBar container-fluid">
+        <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
 
-        <script>
-            function openNav() {
-            document.getElementById("mySidenav").style.width = "300px";
-            }
+        <div id="appName" class="text-center">
+            <p style="font-size:20px;"> HappyBytes </p>
+        </div>
+        <div class="profileDropdown">
+        <img src="img/blankProfile.png" class="profilePic" onclick="profile()">
+        <div id="myDropdown" class="dropdown-content">
+            <a onclick="window.location.replace('index.html')">Signout</a>
 
-            function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            }
-            function darkNav() {
-            document.getElementById("mySidenav").style.background = darkgrey;
-            }
-            function myFunction() {
-            var txt;
-            var person = prompt("Please enter your username:", "Username");
-            if (person == null || person == "") {
-            txt = "enter user name";
-            } else {
-            txt = "Welcome " + person + "! To happybytes!";
-            }
-            document.getElementById("username").innerHTML = txt;
-            document.getElementById("after").style.visibility="hidden";
-            }
+        </div>
 
-        </script>
-        <!--End Drawer Navigator-->
+
+        </div>
+</div>
         <div class="allContent">
         <br>
 
+
+
+</div>
         <!--<h1> Welcome to happybytes (username here) </h1>-->
             <div class="text-center">
                 <h1 class="heading"> Our Mission</h1>
@@ -104,7 +101,7 @@
                 <span class="close">&times;</span>
             </div>
             <div class="modal-body">
-                <p>When someone tries to bring you down remember your foundation, keep it strong and you will not topple</p>
+                <placeholder>When someone tries to bring you down remember your foundation, keep it strong and you will not topple</placeholder>
 
             </div>
         </div>
@@ -136,6 +133,49 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+
+//Drawer Navigator JS
+
+   function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+        }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        }
+    function darkNav() {
+        document.getElementById("mySidenav").style.background = darkgrey;
+        }
+    function myFunction() {
+        var txt;
+        var person = prompt("Please enter your username:", "Username");
+        if (person == null || person == "") {
+            txt = "enter user name";
+        } else {
+            txt = "Welcome " + person + "! To happybytes!";
+        }
+        document.getElementById("username").innerHTML = txt;
+        document.getElementById("after").style.visibility="hidden";
+        }
+
+    //signout
+
+    function profile (){
+            document.getElementById("myDropdown").classList.toggle("show");
+    }
+    // Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.profilePic')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
   }
 }
 </script>
