@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="mainScreens.css">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <script src="js/mainPages.js">
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery.js"></script>
     <script src="js/surveyComplex.js"></script>
@@ -50,32 +51,6 @@
 
 
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-
-        <script>
-            function openNav() {
-            document.getElementById("mySidenav").style.width = "300px";
-            }
-
-            function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            }
-            function darkNav() {
-            document.getElementById("mySidenav").style.background = darkgrey;
-            }
-            function myFunction() {
-            var txt;
-            var person = prompt("Please enter your username:", "Username");
-            if (person == null || person == "") {
-            txt = "enter user name";
-            } else {
-            txt = "Welcome " + person + "! To happybytes!";
-            }
-            document.getElementById("username").innerHTML = txt;
-            document.getElementById("after").style.visibility="hidden";
-            }
-
-        </script>
-        <!--End Drawer Navigator-->
 
 
 
