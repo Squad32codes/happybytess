@@ -20,16 +20,21 @@
         .byteOfTheDay {
             text-align: center;
         }
+        .heading{
+        background-color:#42a5e3;
+        padding: 10px;
+        color: white;
+        }
     </style>
 </head>
 
-<body>
-    <div class="allContent">
+<body onload="modal.style.display = 'block';">
+
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="home.html">Home</a>
             <a href="condition.html">How was your day?</a>
-            <a href="#">Get Advice</a>
+            <a href="#">Get Help</a>
             <a href="#">Important Contacts</a>
             <div id="settings">
                 <a href="settings.html">Settings</a>
@@ -64,15 +69,21 @@
 
         </script>
         <!--End Drawer Navigator-->
+        <div class="allContent">
         <br>
 
         <!--<h1> Welcome to happybytes (username here) </h1>-->
-        <p> Our mission: to help you and many others take control of their sadness and thrive in life </p>
-        <h2> What is yours? </h2>
-    </div>
+            <div class="text-center">
+                <h1 class="heading"> Our Mission</h1>
+                <p> To help you and many others take control of their sadness and thrive in life </p>
+                <h2 class="heading"> What is yours? </h2>
+                <br>
+            </div>
+
+        </div>
 
 
-    <!-- Modal -->
+        <!-- Modal -->
     <!-- Trigger/Open The Modal -->
     <div class="byteOfTheDay">
         <button class="btn btn-outline-primary" id="myBtn">Byte of the Day</button>
