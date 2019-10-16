@@ -36,8 +36,8 @@
         border-radius:5px;
         border:0;
         padding: 10px;
-        padding-right:40px;
-        padding-left:40px;
+        padding-right:100px;
+        padding-left:100px;
     }
 
     .haveAccount{
@@ -55,9 +55,8 @@
     text-align:center;
     margin-top:30px;
     }
-#scale{
-    padding-right:20px;
-    padding-left:20px;
+#scale, #signup{
+    width: 140px;
 }
 
 
@@ -72,19 +71,24 @@
 
     <div class="signUpInfo">
         <form action="login.html">
-
-            <br> <input type="text" name="Username" placeholder="Username" class="textBox"><br>
+            <br> <input type="text" name="email" placeholder="E-mail" class="textBox"><br>
+            <br> <input type="text" name="username" placeholder="Username" class="textBox"><br>
+            <br> <input type="text" name="firstname" placeholder="First Name" class="textBox"><br>
+            <br> <input type="text" name="lastname" placeholder="Last Name" class="textBox"><br>
             <br> <input type="text" name="password" placeholder="Password" class="textBox"><br>
-            <br> <input type="text" name="password" placeholder="RePassword" class="textBox"><br>
-
+            <br> <input type="text" name="password" placeholder="Re-enter Password" class="textBox"><br>
+            <br>
             <div id="toHome">
-                <a href="home.html"><button type="button" class="btn btn-primary" id="signup">Signup</button></a>
+                <a href="home.html"><button type="button" class="btn btn-primary" id="signup">Create Account</button></a>
             </div>
         </form>
     </div>
 
     <div class="back">
-        <a href="index.html"><button type="button" class="btn btn-secondary" id="scale">back</button></a>
+        <a href="index.html"><button type="button" class="btn btn-secondary" id="scale">Back</button></a>
     </div>
+
+
+
 </div>
 </body>
