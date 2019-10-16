@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mainScreens.css">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <script src="js/mainPages.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/jquery.js"></script>
+    <script src="js/surveyComplex.js"></script>
+    <script type="text/javascript">
+    var s = document.createElement('script');
+    s.innerHTML = window.android.getFileContents();
+    document.head.appendChild(s);
+    </script>
+    <style>
+        #after{
+            border:0;
+            border-radius:5px;
+        }
+        .byteOfTheDay {
+            text-align: center;
+        }
+        .phonenumber{
+            border-radius:5px;
+        }
+        #buttons{
+            margin-bottom:10px;
+        }
+        #textbox{
+            margin-bottom:5px;
+        }
+        .textbox{
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="allContent">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="home.html">Home</a>
+            <a href="condition.html">How was your day?</a>
+            <a href="#">Get Advice</a>
+            <a href="#">Important Contacts</a>
+            <div id="settings">
+                <a href="settings.html">Settings</a>
+            </div>
+        </div>
+
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+
+<div class="allContent">
+<div class="textbox">
+<input type="textbox" placeholder="counsler phone number" class="phonenumber" id="textbox">
+<button type="button" class="btn btn-info" id="buttons">Call</button>
+<br>
+<input type="textbox" placeholder="other" class="phonenumber">
+<button type="button" class="btn btn-info" id="buttons">Call</button>
+<br>
+<input type="textbox" placeholder="other" class="phonenumber">
+<button type="button" class="btn btn-info" id="buttons">Call</button>
+<br>
+<button type="button" class="btn btn-danger">Call 911</button>
+</div>
+
+</body>
+</html>
