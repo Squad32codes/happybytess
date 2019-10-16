@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="mainScreens.css">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
     <script src="js/mainPages.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery.js"></script>
@@ -32,6 +33,11 @@
         }
         .textbox{
             text-align:center;
+        }
+
+        .btn {
+            width: 200px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -66,22 +72,17 @@
             </div>
         </div>
 
-
-
-
-<div class="allContent">
-<div class="textbox">
-<input type="textbox" placeholder="counsler phone number" class="phonenumber" id="textbox">
-<button type="button" class="btn btn-info" id="buttons">Call</button>
-<br>
-<input type="textbox" placeholder="other" class="phonenumber">
-<button type="button" class="btn btn-info" id="buttons">Call</button>
-<br>
-<input type="textbox" placeholder="other" class="phonenumber">
-<button type="button" class="btn btn-info" id="buttons">Call</button>
-<br>
-<button type="button" class="btn btn-danger">Call 911</button>
-</div>
-
+        <div class="textbox">
+            <a href="tel:911"><button type="button" class="btn btn-danger">Call 911</button></a>
+            <br/>
+            <a href="tel:18002738255"><button type="button" class="btn btn-danger">Call National Suicide Prevention Lifeline</button></a>
+            <br/>
+            <a href="tel:5551234567"><button type="button" class="btn btn-danger">Call Mom </button></a>
+            <br/>
+            <a href="tel:6661234567"><button type="button" class="btn btn-danger">Call Emergency Contact #2</button></a>
+            <br/>
+            <span class="oi oi-icon-name" title="icon name" aria-hidden="true"></span>
+        </div>
+    </div>
 </body>
 </html>
