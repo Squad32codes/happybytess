@@ -6,13 +6,16 @@
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery.js"></script>
+    <script src="js/surveyComplex.js"></script>
     <script type="text/javascript">
     var s = document.createElement('script');
     s.innerHTML = window.android.getFileContents();
     document.head.appendChild(s);
     </script>
     <style>
-
+.takeSurveyButton{
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -29,7 +32,7 @@
     </div>
 
 
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <span style="font-size:30px;cursor:pointer;margin-left:6px" onclick="openNav()">&#9776;</span>
 
     <script>
     function openNav() {
@@ -48,9 +51,75 @@
 
 
     <h1> Take the survey here and we will give you advice to help improve your day! </h1>
-    <a href="surveyComplex.html">Survey</a>
 
 
+    <!-- Modal -->
+    <!-- Trigger/Open The Modal -->
+    <div class="takeSurveyButton">
+    <button class="btn btn-outline-primary" id="myBtn">Take Survey</button>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Complex Survey -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>How was your day Survey:</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+               <div class="container-fluid">
+    <br>
+    <label for="conditionSlider">Answer the questions below from one to ten</label><br>
+
+    <label for="conditionSlider">How was your day?</label>
+    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider">
+    <label for="conditionSlider">Do you feel that you got everything you wanted done done?</label>
+    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider2">
+    <label for="conditionSlider">Do you think that anything or anyone was working against you today?</label>
+    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider3">
+
+        <br>
+        <br>
+<div class="text-center">
+    <button id='okButton' onclick="myFunction()">Finished? Click me!</button>
+</div>
+    <div id='sliderValue'>
+
+</div>
+
+            </div>
+        </div>
+
+    </div>
+<script>
+
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </div>
 </body>
