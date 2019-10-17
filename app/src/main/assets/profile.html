@@ -26,6 +26,29 @@
         background-color:#42a5e3;
         padding: 10px;
         color: white;
+        font-size: 25px;
+
+        }
+        .profileName{
+        background-color:#4a4a4a;
+        padding: 10px;
+        color: white;
+        font-size: 25px;
+        padding-top: 20px;
+
+        }
+        .profilePicture{
+            width:110px;
+            border-radius:50%;
+            margin: 10px;
+            position: absolute;
+            top: 54px;
+            transform:translateX(-65px);
+            z-index: 1;
+
+        }
+        center {
+            text-align: center;
         }
     </style>
 </head>
@@ -59,15 +82,21 @@
 
 
     </div>
-</div>
+</div><br>
 <div class="allContent">
-    <br>
+    <div class="text-center">
+
+        <div class="center"><img src="img/blankProfile.png" class="profilePicture "></div><br><br>
+        <div class="profileName"><br><h1> Squad32 </h1>
+    </div>
+<div class="information">
+
+
 
 
 
 </div>
-
-
+</div>
 <script>
 window.onclick = function(event) {
   if (!event.target.matches('.profilePic')) {
