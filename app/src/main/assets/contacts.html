@@ -39,12 +39,16 @@
             width: 200px;
             margin-top: 20px;
         }
+        .topBar {
+            position: sticky;
+            z-index: 10;
+        }
     </style>
 </head>
 
 <body>
     <div class="allContent">
-        <div id="mySidenav" class="sidenav">
+        <div id="mySidenav" class="sidenav" style="z-index:11">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="home.html">Home</a>
             <a href="condition.html">How was your day?</a>
@@ -85,5 +89,19 @@
             <span class="oi oi-icon-name" title="icon name" aria-hidden="true"></span>
         </div>
     </div>
+<script>
+window.onclick = function(event) {
+  if (!event.target.matches('.profilePic')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>

@@ -193,7 +193,8 @@ End switch styles
 /* The Top Bar */
 .topBar {
     background-color: #2196F3;
-
+    position: sticky;
+    top:0;
 }
  #appName {
     position:absolute;
