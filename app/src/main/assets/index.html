@@ -14,62 +14,10 @@
 
     <style>
 
-
-    .loginInfo{
-        text-align:center;
-    }
-
-    .text{
-        border-radius:5px;
-    }
-
-    .login{
-        border-radius:5px;
-        border:0;
-        padding: 10px;
-        padding-right:40px;
-        padding-left:40px;
-        background-color:#c3e86d;
-    }
-
-    .new{
-        border-radius:5px;
-        border:0;
-        padding: 10px;
-        padding-right:23px;
-        padding-left:23px;
-    }
-
-    .createone{
-        text-align:center;
-    }
-
-    #backButton{
-        border-radius:5px;
-        border:0;
-        padding: 10px;
-        padding-right:40px;
-        padding-left:40px;
-    }
-
-    .back{
-        padding-top:100px;
-    }
-
-    #loginButton{
-        margin-top: 10px;
-
-    }
-    #login{
-        margin-top:50px;
-        padding-right:19px;
-        padding-left:19px;
-    }
-    #signup{
-       padding-right:5px;
-       padding-right:5px;
-    }
-
+        button {
+            width:100px;
+            margin-top: 25px;
+        }
 
    </style>
 </head>
@@ -81,21 +29,19 @@
         <img src="img/logo.png">
     </div>
 
-    <div class="loginInfo">
+    <div class="loginInfo text-center">
         <form action="login.html">
             <br> <input type="text" name="Username" placeholder="Username" class="text"><br>
             <br> <input type="text" name="password" placeholder="Password" class="text"><br>
 
             <div id="loginButton">
-                <a href="home.html"> <button type="button" id="login" class="btn btn-success">Login</button></a>
+                <a href="home.html"> <button type="button" id="login" class="btn btn-outline-success">Login</button></a>
             </div>
         </form>
     </div>
 
-     <div class="createone">
-         <br>
-
-         <a href="signup.html"><button type="button" class="btn btn-secondary" id="signup">Sign Up!</button></a>
+     <div class="createone text-center">
+         <a href="signup.html"><button type="button" class="btn btn-outline-secondary" id="signup">Sign Up!</button></a>
      </div>
 
 </div>
