@@ -13,9 +13,16 @@
     s.innerHTML = window.android.getFileContents();
     document.head.appendChild(s);
     </script>
+<style>
+.topBar {
+            position: sticky;
+            z-index: 10;
+        }
+</style>
+
 </head>
 <body>
-<div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav" style="z-index:11">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="home.html">Home</a>
             <a href="condition.html">How was your day?</a>
@@ -35,6 +42,7 @@
         <div class="profileDropdown">
         <img src="img/blankProfile.png" class="profilePic" onclick="profile()">
         <div id="myDropdown" class="dropdown-content">
+            <a onclick="window.location.replace('profile.html')">Profile</a>
             <a onclick="window.location.replace('index.html')">Signout</a>
 
         </div>
@@ -43,7 +51,20 @@
         </div>
 </div>
 
-
+<script>
+window.onclick = function(event) {
+  if (!event.target.matches('.profilePic')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 
 
