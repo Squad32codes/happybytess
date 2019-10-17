@@ -85,5 +85,19 @@
             <span class="oi oi-icon-name" title="icon name" aria-hidden="true"></span>
         </div>
     </div>
+<script>
+window.onclick = function(event) {
+  if (!event.target.matches('.profilePic')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
