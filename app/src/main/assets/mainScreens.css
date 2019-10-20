@@ -1,5 +1,5 @@
 
-   /*
+           /*
 The Drawer Navigator
 */
 body {
@@ -142,7 +142,7 @@ End switch styles
 }
 
 /* The Close Button */
-.close {
+.close{
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -158,7 +158,7 @@ End switch styles
 /* Modal Header */
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #42a5e3;
   color: white;
 }
 
@@ -190,3 +190,58 @@ End switch styles
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
 }
+
+/* The Top Bar */
+.topBar {
+    background-color: #2196F3;
+    position: sticky;
+    top:0;
+}
+ #appName {
+    position:absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fefefe;
+        }
+
+.profilePic {
+    position: absolute;
+    width: 30px;
+    right: 14px;
+    top: 8px;
+    border-radius: 50%;
+}
+
+/*Signout */
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 10px;
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  right: 10px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+
+

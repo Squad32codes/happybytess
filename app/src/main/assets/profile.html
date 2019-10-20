@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mainScreens.css">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/jquery.js"></script>
+    <script src="js/surveyComplex.js"></script>
+    <script src="js/mainPages.js"></script>
+    <script type="text/javascript">
+
+    var s = document.createElement('script');
+    s.innerHTML = window.android.getFileContents();
+    document.head.appendChild(s);
+    </script>
+    <style>
+
+        .topBar {
+            position: sticky;
+            z-index: 10;
+        }
+        #after{
+            border:0;
+            border-radius:5px;
+        }
+        .byteOfTheDay {
+            text-align: center;
+        }
+
+        .heading{
+        background-color: #42a5e3;
+        padding: 10px;
+        color: white;
+        font-size: 25px;
+
+        }
+        .profileName{
+        background-color:#4a4a4a;
+        padding: 10px;
+        color: white;
+        font-size: 25px;
+        padding-top: 20px;
+        }
+        .profilePicture{
+            width:110px;
+            border-radius:50%;
+            margin: 10px;
+            position: absolute;
+            top: 54px;
+            transform:translateX(-65px);
+            z-index: 0;
+
+        }
+        center {
+            text-align: center;
+        }
+
+        .dark-grey {
+            color: dark-grey;
+        }
+
+           .row
+    </style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav" style="z-index:11">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="home.html">Home</a>
+    <a href="condition.html">How was your day?</a>
+    <a href="gethelp.html">Get Help</a>
+    <a href="contacts.html">Important Contacts</a>
+</div>
+
+
+<!--Top Bar-->
+<div class="topBar container-fluid">
+    <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+    <div id="appName" class="text-center">
+        <p style="font-size:20px;"> HappyBytes </p>
+    </div>
+    <div class="profileDropdown">
+        <img src="img/blankProfile.png" class="profilePic" onclick="profile()">
+        <div id="myDropdown" class="dropdown-content">
+            <a onclick="window.location.replace('profile.html')">Profile</a>
+            <a onclick="window.location.replace('index.html')">Signout</a>
+
+        </div>
+
+
+
+
+
+
+    </div>
+</div><br>
+<div class="text-center">
+
+<div class="center"><img src="img/blankProfile.png" class="profilePicture "></div><br><br>
+<div class="profileName"><br><h1>Squad32</h1></div><br>
+</div>
+<div class="information container">
+    <h3 class="heading" style="margin-bottom:10px;">Primary Information:</h3>
+
+    <div class="row">
+        <div style="width:10%"></div>
+        <div style="width:40%; font-weight:bold">First Name:</div>
+        <div class="dark-grey" style="width:40%">Squad32</div>
+        <div style="width:10%"></div>
+    </div>
+    <div class="row">
+        <div style="width:10%"></div>
+        <div style="width:40%; font-weight:bold">Last Name:</div>
+        <div class="dark-grey" style="width:40%">Codes</div>
+        <div style="width:10%"></div>
+    </div>
+    <div class="row">
+        <div style="width:10%"></div>
+        <div style="width:40%; font-weight:bold">Username:</div>
+        <div class="dark-grey" style="width:40%">Squad32Codes</div>
+        <div style="width:10%"></div>
+    </div>
+    <div class="row">
+        <div style="width:10%"></div>
+        <div style="width:40%; font-weight:bold">Email:</div>
+        <div class="dark-grey" style="width:40%">Squad32codes@gmail.com</div>
+        <div style="width:10%"></div>
+    </div>
+
+    <h1 class="heading" style="margin-bottom:10px;margin-top:10px;">Optional Information </h1>
+    <div class="row">
+        <div style="width:10%"></div>
+        <div style="width:40%; font-weight:bold">Street:</div>
+        <div class="dark-grey" style="width:40%">301 W Congress St</div>
+        <div style="width:10%"></div></div>
+
+    <div class="row">
+        <div style="width:10%"></div>
+        <div style="width:40%; font-weight:bold">City</div>
+        <div class="dark-grey" style="width:40%">Lafayette</div>
+        <div style="width:10%"></div></div>
+
+    <div class="row">
+        <div style="width:10%"></div>
+        <div style="width:40%; font-weight:bold">State</div>
+        <div class="dark-grey" style="width:40%">LA</div>
+        <div style="width:10%"></div></div>
+
+    <div class="row">
+        <div style="width:10%"></div>
+        <div style="width:40%; font-weight:bold">Zip Code</div>
+        <div class="dark-grey" style="width:40%">70501</div>
+        <div style="width:10%"></div></div>
+
+    <div class="row">
+        <div style="width:10%"></div>
+        <div style="width:40%; font-weight:bold">Date of birth:</div>
+        <div class="dark-grey" style="width:40%">09/16/19</div>
+        <div style="width:10%"></div>
+    </div>
+    
+ </div>
+
+<script>
+window.onclick = function(event) {
+  if (!event.target.matches('.profilePic')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>

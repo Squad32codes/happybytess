@@ -7,7 +7,9 @@
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery.js"></script>
     <script src="js/surveyComplex.js"></script>
+    <script src="js/mainPages.js"></script>
     <script type="text/javascript">
+
     var s = document.createElement('script');
     s.innerHTML = window.android.getFileContents();
     document.head.appendChild(s);
@@ -17,79 +19,92 @@
             border:0;
             border-radius:5px;
         }
+        .byteOfTheDay {
+            text-align: center;
+        }
+        .heading{
+
+        padding: 10px;
+        }
+        .topBar {
+            position: sticky;
+            z-index: 10;
+        }
     </style>
 </head>
 
-<body>
-    <div class="allContent">
-        <div id="mySidenav" class="sidenav">
+<body onload="modal.style.display = 'block';">
+
+        <div id="mySidenav" class="sidenav" style="z-index:11">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="home.html">Home</a>
             <a href="condition.html">How was your day?</a>
-            <a href="#">Get Advice</a>
-            <a href="#">Important Contacts</a>
-            <div id="settings">
-                <a href="settings.html">Settings</a>
-            </div>
+            <a href="gethelp.html">Get Help</a>
+            <a href="contacts.html">Important Contacts</a>
         </div>
 
 
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<!--Top Bar-->
+<div class="topBar container-fluid">
+        <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
 
-        <script>
-            function openNav() {
-            document.getElementById("mySidenav").style.width = "300px";
-            }
+        <div id="appName" class="text-center">
+            <p style="font-size:20px;">HappyBytes</p>
+        </div>
+        <div class="profileDropdown">
+        <img src="img/blankProfile.png" class="profilePic" onclick="profile()">
+        <div id="myDropdown" class="dropdown-content">
+            <a onclick="window.location.replace('profile.html')">Profile</a>
+            <a onclick="window.location.replace('index.html')">Signout</a>
 
-            function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            }
-            function darkNav() {
-            document.getElementById("mySidenav").style.background = darkgrey;
-            }
-            function myFunction() {
-            var txt;
-            var person = prompt("Please enter your username:", "Username");
-            if (person == null || person == "") {
-            txt = "enter user name";
-            } else {
-            txt = "Welcome " + person + "! To happybytes!";
-            }
-            document.getElementById("username").innerHTML = txt;
-            document.getElementById("after").style.visibility="hidden";
-            }
+        </div>
 
-        </script>
-        <!--End Drawer Navigator-->
+
+        </div>
+</div>
+        <div class="allContent">
         <br>
-        <button type="button" onclick="myFunction()" id="after">Enter Username</button>
-        <h1 id="username"></h1>
+
+
+
+</div>
         <!--<h1> Welcome to happybytes (username here) </h1>-->
-        <p> Our mission: to help you and many others take control of their sadness and thrive in life </p>
-        <h2> What is yours? </h2>
-    </div>
+            <div class="text-center">
+                <h1 class="heading">Our Mission:</h1>
+                <p class="font-italic" style="padding-left:50px; padding-right:50px">"To help you and many others take control of their sadness and thrive in life"</p>
 
+                <br>
+            </div>
 
-    <!-- Modal -->
+        </div>
+
+<div class="text-center" style="padding: 0px 50px">
+    <h4 class="heading" style="margin-bottom:10">What is your mission statement?</h4>
+    <textarea class="w-100" placeholder="Type your mission statement here!" style="margin-bottom:15px; padding: 10px;"></textarea>
+</div>
+
+        <!-- Modal -->
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
-
+    <div class="byteOfTheDay">
+        <button class="btn btn-outline-primary" id="myBtn">Byte of the Day</button>
+    </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close">&times;</span>
                 <h2>Byte of the day:</h2>
+                <span class="close">&times;</span>
             </div>
             <div class="modal-body">
-                <p>When someone tries to bring you down remember your foundation, keep it strong and you will not topple</p>
+                <placeholder class="font-italic">"When someone tries to bring you down remember your foundation, keep it strong and you will not topple"</placeholder>
 
             </div>
         </div>
 
     </div>
+
 <script>
 
     // Get the modal
@@ -115,6 +130,22 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+  }
+}
+
+
+    //signout
+
+window.onclick = function(event) {
+  if (!event.target.matches('.profilePic')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
   }
 }
 </script>

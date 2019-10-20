@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mainScreens.css">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
+    <script src="js/mainPages.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/jquery.js"></script>
+    <script src="js/surveyComplex.js"></script>
+    <script type="text/javascript">
+    var s = document.createElement('script');
+    s.innerHTML = window.android.getFileContents();
+    document.head.appendChild(s);
+    </script>
+    <style>
+        #after{
+            border:0;
+            border-radius:5px;
+        }
+        .byteOfTheDay {
+            text-align: center;
+        }
+        .phonenumber{
+            border-radius:5px;
+        }
+        #buttons{
+            margin-bottom:10px;
+            margin-right:10px;
+        }
+        #textbox{
+            margin-bottom:5px;
+        }
+        .textbox{
+            text-align:center;
+        }
+
+        .btn {
+            width: 230px;
+            margin-top: 10px;
+        }
+        .topBar {
+            position: sticky;
+            z-index: 10;
+        }
+        .callPic {
+            width: 40px;
+
+        }
+        .leftSide {
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+
+        }
+
+        .callNumbers{
+            margin-top: 75px;
+        }
+         .heading{
+        background-color: #42a5e3;
+        padding: 10px;
+        color: white;
+        font-size: 25px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        }
+        .row {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="allContent">
+        <div id="mySidenav" class="sidenav" style="z-index:11">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="home.html">Home</a>
+            <a href="condition.html">How was your day?</a>
+            <a href="gethelp.html">Get Help</a>
+            <a href="contacts.html">Important Contacts</a>
+        </div>
+
+        <div class="topBar container-fluid">
+            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+            <div id="appName" class="text-center">
+                <p style="font-size:20px;"> HappyBytes </p>
+            </div>
+            <div class="profileDropdown">
+                <img src="img/blankProfile.png" class="profilePic" onclick="profile()">
+                <div id="myDropdown" class="dropdown-content">
+                    <a onclick="window.location.replace('profile.html')">Profile</a>
+                    <a onclick="window.location.replace('index.html')">Signout</a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="textbox">
+
+
+        <div class="container callNumbers">
+            <h3 class="heading">Emergency Contacts</h3>
+            <div class="row">
+                <div style="width:10%"></div>
+                <div style="width:60%; font-weight:bold"><h3 class="leftSide">Call 911</h3></div>
+                <div class="dark-grey" style="width:20%"><a href="tel:911"><img src="img/phoneIcon.png" class="callPic"></a></div>
+                <div style="width:10%"></div>
+            </div>
+
+            <div class="row">
+                <div style="width:10%"></div>
+                <div style="width:60%; font-weight:bold"><h3 class="leftSide">Call Suicide Helpline</h3></div>
+                <div class="dark-grey" style="width:20%"><a href="tel:1-800-273-8255"><img src="img/phoneIcon.png" class="callPic"></a></div>
+                <div style="width:10%"></div>
+            </div>
+        <h3 class="heading">Trusted Contacts</h3>
+            <div class="row">
+                <div style="width:10%"></div>
+                <div style="width:60%; font-weight:bold"><h3 class="leftSide">Call Mom</h3></div>
+                <div class="dark-grey" style="width:20%"><a href="tel:1800-588-2300"><img src="img/phoneIcon.png" class="callPic"></a></div>
+                <div style="width:10%"></div>
+            </div>
+
+            <div class="row">
+                <div style="width:10%"></div>
+                <div style="width:60%; font-weight:bold"><h3 class="leftSide">Call Dad</h3></div>
+                <div class="dark-grey" style="width:20%"><a href="tel:420-420-6969"><img src="img/phoneIcon.png" class="callPic"></a></div>
+                <div style="width:10%"></div>
+            </div>
+
+
+        </div>
+            <br/>
+
+            <span class="oi oi-icon-name" title="icon name" aria-hidden="true"></span>
+        </div>
+    </div>
+<script>
+window.onclick = function(event) {
+  if (!event.target.matches('.profilePic')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>
