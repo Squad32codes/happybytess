@@ -52,7 +52,7 @@
             <br> <input type="text" name="Username" placeholder="Username" class="text" id="userInput"><br>
             <br> <input type="password" name="password" placeholder="Password" class="text" id="passInput"><br>
 
-            <div id="loginIssue"></div>
+            <div id="loginIssue" class="container"></div>
             <div id="loginButton">
             <a href="javascript:void(0)" class="closebtn btn btn-outline-success sign" id="loginInput">Login</a>
 
@@ -96,11 +96,11 @@ for (var i =0; i < users.length; i++){
          if(users[i].username === userInput.value && users[i].password === passInput.value){
             window.location.replace("home.html");
          } else if (userInput.value === ""){
-             document.getElementById("loginIssue").innerHTML = "Please enter your username";
+             document.getElementById("loginIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Please enter your username</div>";
          } else if (passInput.value === ""){
-              document.getElementById("loginIssue").innerHTML = "Please enter your password";
+              document.getElementById("loginIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Please enter your password</div>";
          } else {
-             document.getElementById("loginIssue").innerHTML = "Username or password does not match";
+             document.getElementById("loginIssue").innerHTML = "<div class='alert alert-danger' role='alert'> Username or password does not match</div>";
          }
 }
 }
