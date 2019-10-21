@@ -16,7 +16,12 @@
 
         .sign {
             width:100px;
+        }
+        #signup{
             margin-top: 25px;
+        }
+        #passInput {
+            margin-bottom: 25px;
         }
 
         .description {
@@ -26,7 +31,12 @@
             font-weight: bold;
             color: 	#808080;
         }
+        #loginIssue{
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: red;
 
+        }
    </style>
 </head>
 
@@ -39,11 +49,12 @@
 
     <div class="loginInfo text-center">
         <form action="login.html">
-            <br> <input type="text" name="Username" placeholder="Username" class="text"><br>
-            <br> <input type="password" name="password" placeholder="Password" class="text"><br>
+            <br> <input type="text" name="Username" placeholder="Username" class="text" id="userInput"><br>
+            <br> <input type="password" name="password" placeholder="Password" class="text" id="passInput"><br>
 
+            <div id="loginIssue"></div>
             <div id="loginButton">
-            <a href="javascript:void(0)" class="closebtn btn btn-outline-success sign" onclick="login()">Login</a>
+            <a href="javascript:void(0)" class="closebtn btn btn-outline-success sign" id="loginInput">Login</a>
 
             </div>
         </form>
@@ -58,11 +69,42 @@
 </div>
             </div>
 
+
 <script>
+var loginBtn = document.getElementById("loginInput");
+var userInput = document.getElementById("userInput");
+var passInput = document.getElementById("passInput");
+var users = [
+	{
+		username:"Bren519",
+		password:"beanPizza"
+	},
+	{
+		username:"Weston714",
+		password:"forehead"
+	},
+	{
+		username:"Squad32Codes",
+		password:"stemCGI2020"
+	}
 
-function login (){
-    $(document).ready(function() {$.getJSON('js/login.json').then(function(data){ data.projects.forEach(function(project){ $('#login')if(login.username = userInput && login.password = passInput){window.location.replace(home.html)}
+];
 
-    }
+loginBtn.onclick = function(){
+for (var i =0; i < users.length; i++){
+
+         if(users[i].username === userInput.value && users[i].password === passInput.value){
+            window.location.replace("home.html");
+         } else if (userInput.value === ""){
+             document.getElementById("loginIssue").innerHTML = "Please enter your username";
+         } else if (passInput.value === ""){
+              document.getElementById("loginIssue").innerHTML = "Please enter your password";
+         } else {
+             document.getElementById("loginIssue").innerHTML = "Username or password does not match";
+         }
+}
+}
+
+    </script>
 </div>
 </body>
