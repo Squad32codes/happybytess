@@ -8,17 +8,38 @@
     <script src="js/mainPages.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery.js"></script>
-    <script src="js/surveyComplex.js"></script>
     <script type="text/javascript">
     var s = document.createElement('script');
     s.innerHTML = window.android.getFileContents();
     document.head.appendChild(s);
     </script>
     <style>
-.heading{
-    margin-top:10px;
-}
+
+    #hotlinebutton{
+        margin-bottom:10px;
+    }
+    h6{
+    margin-left:20px;
+    margin-right:20px;
+    }
+
+    .heading{
+        background-color: #42a5e3;
+        padding: 10px 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+        color: white;
+        font-size: 25px;
+    }
+
+    .text {
+        margin-bottom:35px;
+        margin-left: 35px;
+        margin-right:35px;
+    }
     </style>
+
 </head>
 <body>
 <div class="allContent">
@@ -28,6 +49,9 @@
         <a href="condition.html">How was your day?</a>
         <a href="gethelp.html">Get Help</a>
         <a href="contacts.html">Important Contacts</a>
+        <div id="settings">
+            <a href="settings.html">Settings</a>
+        </div>
     </div>
 
     <div class="topBar container-fluid">
@@ -46,12 +70,28 @@
         </div>
     </div>
     <div class="text-center">
-        <div class="heading">
-            <h5>Need assistance or just want someone to talk to</h5>
-        </div>
-        <a href="https://suicidepreventionlifeline.org/talk-to-someone-now/"><button type="button"class="btn btn-outline-secondary">Hotline Site</button></a>
-        <a href="https://www.google.com/maps/search/psychologist+near+me/@30.2119578,-92.0385691,12z/data=!3m1!4b1"><button type="button" class="btn btn-outline-primary">Psychologist Near Me</button></a>
 
+        <h3 class="heading" style="margin-top:50px">Talk To Someone Now</h3>
+        <div class="text">
+            <h6>If you’re thinking about suicide, are worried about a friend or loved one, or would like emotional support, the Lifeline network is available 24/7 across the United States.</h6>
+        </div>
+
+        <h3 class="heading">Help Yourself</h3>
+
+        <div class="text">
+            <h6>If you’re in crisis, there are options available to help you cope. You can also call the Lifeline at any time to speak to someone and get support.</h6>
+        </div>
+
+        <h3 class="heading">Help Someone Else</h3>
+
+        <div class="text">
+            <h6>If someone you know is struggling emotionally or having a hard time,  you can be the difference in getting them the help they need. It’s important to take care of yourself when you are supporting someone through a difficult time, as this may stir up difficult emotions. If it does, please reach out for support yourself.</h6>
+        </div>
+        <div class="hotlinebutton">
+            <a href="https://suicidepreventionlifeline.org/talk-to-someone-now/"><button type="button"class="btn btn-outline-primary"id="hotlinebutton">Suicide Prevention Lifeline Site</button></a>
+        </div>
+        <a id="mapsSearchLink" href="https://www.google.com/maps/search/psychologist+near+me/"><button id="mapsSearchButton" type="button" class="btn btn-outline-success" style="margin-top:20px">Search for Psychologists Near Me</button></a>
     </div>
+</div>
 </body>
 </html>
