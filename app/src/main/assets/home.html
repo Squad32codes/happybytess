@@ -98,7 +98,7 @@
                 <span class="close">&times;</span>
             </div>
             <div class="modal-body">
-                <placeholder class="font-italic">"When someone tries to bring you down remember your foundation, keep it strong and you will not topple"</placeholder>
+                <placeholder class="font-italic" id="byteofday"></placeholder>
 
             </div>
         </div>
@@ -148,6 +148,20 @@ window.onclick = function(event) {
     }
   }
 }
+
+
+var bytes = [
+"When someone tries to bring you down remember your foundation, keep it strong and you will not topple",
+"\"The Way Get Started Is To Quit Talking And Begin Doing.\" – Walt Disney",
+"\“Don’t Let Yesterday Take Up Too Much Of Today.\” – Will Rogers",
+"You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.",
+"\"It’s Not Whether You Get Knocked Down, It’s Whether You Get Up.\” – Vince Lombardi",
+"\"If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You.\” – Steve Jobs",
+"\“We Generate Fears While We Sit. We Overcome Them By Action.\” – Dr. Henry Link",
+
+]
+
+document.getElementById("byteofday").innerHTML = bytes[Math.floor(Math.random() * bytes.length)];
 </script>
 
 </body>
