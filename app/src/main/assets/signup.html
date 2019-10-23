@@ -104,20 +104,10 @@
 
 function signUP (){
 
-    if (inputA.value != ""){
-    if (inputB.value != ""){
-    if (inputC.value != ""){
-    if (inputD.value != ""){
-    if (inputE.value != ""){
-    if (inputF.value != ""){
+    if (inputA.value != "" && inputB.value != "" && inputC.value != "" && inputD.value != "" && inputE.value != "" && inputF.value != ""){
         if(inputE.value == inputF.value){
             window.location.replace("home.html");
         } else {document.getElementById("signupIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Passwords Must Match</div>"}
-    } else {document.getElementById("signupIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Please Fill Out ALL Elements</div>"}
-    } else {document.getElementById("signupIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Please Fill Out ALL Elements</div>"}
-    } else {document.getElementById("signupIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Please Fill Out ALL Elements</div>"}
-    } else {document.getElementById("signupIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Please Fill Out ALL Elements</div>"}
-    } else {document.getElementById("signupIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Please Fill Out ALL Elements</div>"}
     } else {document.getElementById("signupIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Please Fill Out ALL Elements</div>"}
 }
 
