@@ -58,7 +58,12 @@
 #scale, #signup{
     width: 140px;
 }
+ #signupIssue{
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: red;
 
+        }
 
     </style>
 </head>
@@ -71,15 +76,16 @@
 
     <div class="signUpInfo">
         <form action="login.html">
-            <br> <input type="text" name="email" placeholder="E-mail" class="textBox"><br>
-            <br> <input type="text" name="username" placeholder="Username" class="textBox"><br>
-            <br> <input type="text" name="firstname" placeholder="First Name" class="textBox"><br>
-            <br> <input type="text" name="lastname" placeholder="Last Name" class="textBox"><br>
-            <br> <input type="password" name="password" placeholder="Password" class="textBox"><br>
-            <br> <input type="password" name="password" placeholder="Re-enter Password" class="textBox"><br>
+            <br> <input type="text" name="email" placeholder="E-mail" class="textBox" id="emailInput" ><br>
+            <br> <input type="text" name="username" placeholder="Username" class="textBox" id="userInput" ><br>
+            <br> <input type="text" name="firstname" placeholder="First Name" class="textBox" id="fNameInput"><br>
+            <br> <input type="text" name="lastname" placeholder="Last Name" class="textBox" id="lNameInput"><br>
+            <br> <input type="password" name="password" placeholder="Password" class="textBox" id="passInput"><br>
+            <br> <input type="password" name="password" placeholder="Re-enter Password" class="textBox" id="rePassInput"><br>
             <br>
+            <div class="container" id="signupIssue"></div>
             <div id="toHome">
-                <a href="home.html"><button type="button" class="btn btn-outline-primary" id="signup">Create Account</button></a>
+                <button type="button" class="btn btn-outline-primary" id="signup" onclick="signUP()">Create Account</button>
             </div>
         </form>
     </div>
@@ -88,7 +94,24 @@
         <a href="index.html"><button type="button" class="btn btn-outline-secondary" id="scale">Back</button></a>
     </div>
 
+<script>
+    var inputA = document.getElementById("emailInput");
+    var inputB = document.getElementById("userInput");
+    var inputC = document.getElementById("fNameInput");
+    var inputD = document.getElementById("lNameInput");
+    var inputE = document.getElementById("passInput");
+    var inputF = document.getElementById("rePassInput");
 
+function signUP (){
+
+    if (inputA.value != "" && inputB.value != "" && inputC.value != "" && inputD.value != "" && inputE.value != "" && inputF.value != ""){
+        if(inputE.value == inputF.value){
+            window.location.replace("home.html");
+        } else {document.getElementById("signupIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Passwords Must Match</div>"}
+    } else {document.getElementById("signupIssue").innerHTML = "<div class='alert alert-danger' role='alert'>Please Fill Out ALL Elements</div>"}
+}
+
+</script>
 
 </div>
 </body>
