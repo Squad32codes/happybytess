@@ -1,18 +1,23 @@
-   function profile (){
-            document.getElementById("myDropdown").classList.toggle("show");
-    }
+function profile (){
+        document.getElementById("myDropdown").classList.toggle("show");
+}
 
 
 //Drawer Navigator JS
 
-   function openNav() {
-        document.getElementById("mySidenav").style.width = "300px";
-        }
+function openNav() {
+    document.getElementById("mySideNav").style.width = "300px";
+    }
 
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        }
-    function darkNav() {
-        document.getElementById("mySidenav").style.background = darkgrey;
-        }
+function closeNav() {
+    document.getElementById("mySideNav").style.width = "0";
+}
+
+function darkNav() {
+    document.getElementById("mySideNav").style.background = darkgrey;
+}
+
+$.get("sideBar.html", function(data){
+    $("#mySidenav").replaceWith(data);
+});
 

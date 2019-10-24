@@ -1,0 +1,17 @@
+#after{
+    border:0;
+    border-radius:5px;
+}
+
+.byteOfTheDay {
+    text-align: center;
+}
+
+.heading{
+padding: 10px;
+}
+
+.topBar {
+    position: sticky;
+    z-index: 10;
+}

@@ -1,0 +1,23 @@
+#signup{
+    margin-top: 25px;
+}
+
+#passInput {
+    margin-top:25px;
+    margin-bottom: 25px;
+}
+
+.description {
+    width: 75%;
+    text-align: center;
+    margin-top: 70px;
+    font-weight: bold;
+    color: 	#808080;
+}
+
+#loginIssue{
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: red;
+
+}
