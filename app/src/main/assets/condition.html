@@ -17,23 +17,34 @@
 .takeSurveyButton{
     text-align: center;
 }
+.topBar {
+            position: sticky;
+            z-index: 10;
+        }
+        .custom-range{
+
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: 50px;
+        }
+
+        .question{
+            margin-bottom: 20px;
+
+       }
     </style>
 </head>
 <body>
 
 
 <div class="allContent">
-    <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav" style="z-index:11">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="home.html">Home</a>
         <a href="condition.html">How was your day?</a>
         <a href="gethelp.html">Get Help</a>
         <a href="contacts.html">Important Contacts</a>
-        <div id="settings">
-            <a href="settings.html">Settings</a>
-        </div>
     </div>
-
 <!--Top Bar-->
 <div class="topBar container-fluid">
         <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
@@ -44,6 +55,7 @@
         <div class="profileDropdown">
         <img src="img/blankProfile.png" class="profilePic" onclick="profile()">
         <div id="myDropdown" class="dropdown-content">
+            <a onclick="window.location.replace('profile.html')">Profile</a>
             <a onclick="window.location.replace('index.html')">Signout</a>
 
         </div>
@@ -92,14 +104,35 @@
             <div class="modal-body">
                <div class="container-fluid">
     <br>
-    <label for="conditionSlider">Answer the questions below from one to ten</label><br>
 
-    <label for="conditionSlider">How was your day?</label>
-    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider">
-    <label for="conditionSlider">Do you feel that you got everything you wanted done done?</label>
-    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider2">
-    <label for="conditionSlider">Do you think that anything or anyone was working against you today?</label>
-    <input type="range" class="custom-range" min="1" max="10" id="conditionSlider3">
+                   <label style="margin-bottom: 30px;font-weight:bold;font-size:20px;" for="conditionSlider">Answer the questions below and we will try to find ways to improve your day!</label><br>
+                   <label class="font-italic question" for="conditionSlider">How was your day?</label>
+                   <div class="row">
+                       <div style="width:3%">1</div>
+                       <div style="width:94%; font-weight:bold"><input type="range" class="custom-range" min="1" max="10" id="conditionSlider"></div>
+                       <div style="width:3%"> 10</div>
+                   </div>
+
+                   <label class="font-italic question" for="conditionSlider">Do you feel you've completed all that you've wanted today?</label>
+                <div class="row">
+                    <div style="width:3%">1</div>
+                    <div style="width:94%; font-weight:bold"><input type="range" class="custom-range" min="1" max="10" id="conditionSlider2"></div>
+                    <div style="width:3%"> 10</div><br>
+                    </div>
+                   <label class="font-italic question" for="conditionSlider">Do you think that things were on your side today?</label>
+            <div class="row">
+                <div style="width:3%">1</div>
+                <div style="width:94%; font-weight:bold"><input type="range" class="custom-range" min="1" max="10" id="conditionSlider3"></div>
+                <div style="width:3%"> 10</div>
+        </div>
+
+
+
+
+
+
+
+
 
         <br>
         <br>
@@ -142,7 +175,20 @@ window.onclick = function(event) {
   }
 }
 </script>
-
+<script>
+window.onclick = function(event) {
+  if (!event.target.matches('.profilePic')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </div>
 </body>
 </html>

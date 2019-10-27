@@ -1,4 +1,5 @@
-   /*
+
+           /*
 The Drawer Navigator
 */
 body {
@@ -193,7 +194,8 @@ End switch styles
 /* The Top Bar */
 .topBar {
     background-color: #2196F3;
-
+    position: sticky;
+    top:0;
 }
  #appName {
     position:absolute;
@@ -223,6 +225,7 @@ End switch styles
   right: 10px;
 }
 
+
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
@@ -237,3 +240,8 @@ End switch styles
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+
+
+
+

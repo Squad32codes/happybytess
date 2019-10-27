@@ -27,7 +27,7 @@
         $('#okButton').click(function() {
                  // Use parseInt(text, 10) to parse a string into an integer
                  // https://gomakethings.com/converting-strings-to-numbers-with-vanilla-javascript/
-                 total = parseInt(slideA, 10)+parseInt(slideB, 10)-parseInt(slideC, 10) + 11;
+                 total = parseInt(slideA, 10)+parseInt(slideB, 10)+parseInt(slideC, 10);
 
                  if        (total >= 24){
                     window.location.replace("greatDay.html")

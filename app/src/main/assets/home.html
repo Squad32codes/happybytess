@@ -26,20 +26,21 @@
 
         padding: 10px;
         }
+        .topBar {
+            position: sticky;
+            z-index: 10;
+        }
     </style>
 </head>
 
 <body onload="modal.style.display = 'block';">
 
-        <div id="mySidenav" class="sidenav">
+        <div id="mySidenav" class="sidenav" style="z-index:11">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="home.html">Home</a>
             <a href="condition.html">How was your day?</a>
             <a href="gethelp.html">Get Help</a>
             <a href="contacts.html">Important Contacts</a>
-            <div id="settings">
-                <a href="settings.html">Settings</a>
-            </div>
         </div>
 
 
@@ -53,6 +54,7 @@
         <div class="profileDropdown">
         <img src="img/blankProfile.png" class="profilePic" onclick="profile()">
         <div id="myDropdown" class="dropdown-content">
+            <a onclick="window.location.replace('profile.html')">Profile</a>
             <a onclick="window.location.replace('index.html')">Signout</a>
 
         </div>
@@ -96,7 +98,7 @@
                 <span class="close">&times;</span>
             </div>
             <div class="modal-body">
-                <placeholder class="font-italic">"When someone tries to bring you down remember your foundation, keep it strong and you will not topple"</placeholder>
+                <placeholder class="font-italic" id="byteofday"></placeholder>
 
             </div>
         </div>
@@ -134,7 +136,32 @@ window.onclick = function(event) {
 
     //signout
 
+window.onclick = function(event) {
+  if (!event.target.matches('.profilePic')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 
+
+var bytes = [
+"When someone tries to bring you down remember your foundation, keep it strong and you will not topple",
+"\"The Way Get Started Is To Quit Talking And Begin Doing.\" – Walt Disney",
+"\“Don’t Let Yesterday Take Up Too Much Of Today.\” – Will Rogers",
+"You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.",
+"\"It’s Not Whether You Get Knocked Down, It’s Whether You Get Up.\” – Vince Lombardi",
+"\"If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You.\” – Steve Jobs",
+"\“We Generate Fears While We Sit. We Overcome Them By Action.\” – Dr. Henry Link",
+
+]
+
+document.getElementById("byteofday").innerHTML = bytes[Math.floor(Math.random() * bytes.length)];
 </script>
 
 </body>

@@ -4,17 +4,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="mainScreens.css">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+<<<<<<< HEAD
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/jquery.js"></script>
     <script src="js/surveyComplex.js"></script>
     <script src="js/mainPages.js"></script>
     <script type="text/javascript">
 
+=======
+
+    <script src="js/mainPages.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/jquery.js"></script>
+    <script type="text/javascript">
+>>>>>>> d1ac040c227a1d07d65c30a6caec5ebe01ec75b0
     var s = document.createElement('script');
     s.innerHTML = window.android.getFileContents();
     document.head.appendChild(s);
     </script>
     <style>
+<<<<<<< HEAD
 .lifeline{
     text-align:center;
 }
@@ -41,6 +50,38 @@
 </div>
 <div class="allContent">
     <div id="mySidenav" class="sidenav">
+=======
+
+    #hotlinebutton{
+        margin-bottom:5px;
+    }
+    h6{
+    margin-left:20px;
+    margin-right:20px;
+    }
+
+    .heading{
+        background-color: #42a5e3;
+        padding: 5px 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 5px;
+        color: white;
+        font-size: 25px;
+    }
+
+    .text {
+        margin-bottom:15px;
+        margin-left: 25px;
+        margin-right:25px;
+    }
+    </style>
+
+</head>
+<body>
+<div class="allContent">
+    <div id="mySidenav" class="sidenav" style="z-index:11">
+>>>>>>> d1ac040c227a1d07d65c30a6caec5ebe01ec75b0
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="home.html">Home</a>
         <a href="condition.html">How was your day?</a>
@@ -50,6 +91,7 @@
             <a href="settings.html">Settings</a>
         </div>
     </div>
+<<<<<<< HEAD
 <div class="lifeline">
     <h6>If you are thinking about it then <em>Smack</em> the button below</h6>
     <a href="https://suicidepreventionlifeline.org/talk-to-someone-now/"><button type="button" class="btn btn-outline-secondary">Life line cite</button></a>
@@ -61,3 +103,47 @@
 </div>
 </body>
 </html>
+=======
+
+    <div class="topBar container-fluid">
+        <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+        <div id="appName" class="text-center">
+            <p style="font-size:20px;"> HappyBytes </p>
+        </div>
+        <div class="profileDropdown">
+            <img src="img/blankProfile.png" class="profilePic" onclick="profile()">
+            <div id="myDropdown" class="dropdown-content">
+                <a onclick="window.location.replace('profile.html')">Profile</a>
+                <a onclick="window.location.replace('index.html')">Signout</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+
+        <h4 class="heading" style="margin-top:25px">Talk To Someone Now</h4>
+        <div class="text">
+            <h6>If you’re thinking about suicide, are worried about a friend or loved one, or would like emotional support, the Lifeline network is available 24/7 across the United States.</h6>
+        </div>
+
+        <h4 class="heading">Help Yourself</h4>
+
+        <div class="text">
+            <h6>If you’re in crisis, there are options available to help you cope. You can also call the Lifeline at any time to speak to someone and get support.</h6>
+        </div>
+
+        <h4 class="heading">Help Someone Else</h4>
+
+        <div class="text">
+            <h6>If someone you know is struggling emotionally or having a hard time,  you can be the difference in getting them the help they need. It’s important to take care of yourself when you are supporting someone through a difficult time, as this may stir up difficult emotions. If it does, please reach out for support yourself.</h6>
+        </div>
+        <div class="hotlinebutton">
+            <a href="https://suicidepreventionlifeline.org/talk-to-someone-now/"><button type="button"class="btn btn-outline-primary"id="hotlinebutton">Suicide Prevention Lifeline Site</button></a>
+        </div>
+        <a id="mapsSearchLink" href="https://www.google.com/maps/search/psychologist+near+me/"><button id="mapsSearchButton" type="button" class="btn btn-outline-success" style="margin-top:20px">Search for Psychologists Near Me</button></a>
+    </div>
+</div>
+</body>
+</html>
+>>>>>>> d1ac040c227a1d07d65c30a6caec5ebe01ec75b0
