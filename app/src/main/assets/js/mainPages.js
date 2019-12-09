@@ -2,6 +2,11 @@ function profile (){
         document.getElementById("myDropdown").classList.toggle("show");
 }
 
+//adds information from sideBar.html to the #mySideNav div
+    $(function(){
+      $("#mySideNav").load("sideBar.html"); 
+    });
+
 
 //Drawer Navigator JS
 
@@ -11,6 +16,7 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mySideNav").style.width = "0";
+    document.getElementById
 }
 
 function darkNav() {
