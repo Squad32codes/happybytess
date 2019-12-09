@@ -23,7 +23,6 @@ function darkNav() {
     document.getElementById("mySideNav").style.background = darkgrey;
 }
 
-$.get("sideBar.html", function(data){
-    $("#mySidenav").replaceWith(data);
+$.get("topBar.html", function(sidedata){
+    $("#navi").replaceWith(sidedata);
 });
-

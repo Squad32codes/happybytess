@@ -1,0 +1,25 @@
+ 
+ <!--Side Navigator-->
+ <div id="mySideNav" class="sidenav" style="z-index:11">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="home.html">Home</a>
+    <a href="condition.html">How was your day?</a>
+    <a href="gethelp.html">Get Help</a>
+    <a href="contacts.html">Important Contacts</a>
+</div>
+
+<!--Top Bar-->
+<div class="topBar container-fluid">
+         <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+        <div id="appName" class="text-center">
+            <p style="font-size:20px;">HappyBytes</p>
+        </div>
+        <div class="profileDropdown">
+            <img src="img/blankProfile.png" class="profilePic" onclick="profile()">
+            <div id="myDropdown" class="dropdown-content">
+                <a onclick="window.location.replace('profile.html')">Profile</a>
+                <a onclick="window.location.replace('index.html')">Signout</a>
+            </div>
+        </div>
+    </div>
