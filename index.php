@@ -39,7 +39,6 @@ $conn->close();
     <script src="js/index.js"></script>
     <title>HappyBytes Login</title>
 </head>
-
     <body class="allContent">
         <div class="logo">
             <img src="img/logo.png">
