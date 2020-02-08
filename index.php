@@ -1,8 +1,18 @@
 <?php
 $servername = "localhost";
-$username = "username";
+$username = "root";
 $password = "password";
-$dbname = "myDB";
+$dbname = "happybytes";
+
+function console_log($output, $with_script_tags = true) {
+    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . 
+');';
+    if ($with_script_tags) {
+        $js_code = '<script>' . $js_code . '</script>';
+    }
+    echo $js_code;
+}
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -11,17 +21,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, firstname, lastname FROM MyGuests";
+$sql = "SELECT Username, Password FROM users";
 $result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+while($row = $result->fetch_assoc()) {
+       console_log("Name: " . $row["Username"]. " " . $row["Password"]);
     }
-} else {
-    echo "0 results";
-}
+
 $conn->close();
 ?>
 <html>
